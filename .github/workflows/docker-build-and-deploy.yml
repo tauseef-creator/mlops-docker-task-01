@@ -1,4 +1,4 @@
-name: Publish Docker image
+name: Publish Docker Image
 
 on:
   push:
@@ -18,6 +18,6 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/simple-flask-app .
-        docker tag ${{ secrets.DOCKER_USERNAME }}/simple-flask-app ${{ secrets.DOCKER_USERNAME }}/simple-flask-app:latest
-        docker push ${{ secrets.DOCKER_USERNAME }}/simple-flask-app:latest
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/linear-regression-app .
+        docker tag ${{ secrets.DOCKER_USERNAME }}/linear-regression-app ${{ secrets.DOCKER_USERNAME }}/linear-regression-app:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/linear-regression-app:latest
