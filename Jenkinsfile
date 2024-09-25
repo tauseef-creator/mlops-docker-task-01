@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'ubuntu' // Ensure Jenkins agent has Docker installed
-    }
+    agent any
     
     environment {
         DOCKER_USERNAME = credentials('docker-username') // Jenkins credential ID for DockerHub username
